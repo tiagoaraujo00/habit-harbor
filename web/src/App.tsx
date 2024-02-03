@@ -1,14 +1,13 @@
-import Habit from "./components/Habit";
+// import Habit from "./components/Habit";
 import "./styles/global.css";
+import logoImage from './assets/logo.svg';
 
-function App() {
+export function App() {
   return( 
-  <div className="">
-    <Habit completed={3} />
-    <Habit completed={3} />
-    <Habit completed={3} />
+  <div className="flex items-center justify-center w-screen h-screen">
+    <div className="flex flex-col w-full max-w-5xl gap-16 px-6">
+    <img src={logoImage} alt="logo" />
+    </div>
   </div>
   )
 }
-
-export default App;
