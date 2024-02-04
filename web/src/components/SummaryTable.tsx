@@ -6,7 +6,6 @@ const weekDays = ["D", "S", "T", "Q", "Q", "S", "S"];
 const summaryDates = generateDatesFromYearBeginning();
 console.log(summaryDates);
 
-
 const SummaryTable = () => {
   return (
     <div className="flex w-full">
@@ -23,20 +22,9 @@ const SummaryTable = () => {
         })}
       </div>
       <div className="grid grid-flow-col gap-3 grid-rows-7">
-        <HabitDay />
-        <HabitDay />
-        <HabitDay />
-        <HabitDay />
-        <HabitDay />
-        <HabitDay />
-        <HabitDay />
-        <HabitDay />
-        <HabitDay />
-        <HabitDay />
-        <HabitDay />
-        <HabitDay />
-        <HabitDay />
-        <HabitDay />
+        {summaryDates.map((date) => (
+          <HabitDay key={date.toString()} />
+        ))}
       </div>
     </div>
   );
